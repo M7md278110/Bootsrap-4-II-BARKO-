@@ -16,6 +16,24 @@ body {font-family: 'Sintony', sans-serif;}
     display: block;
     margin: 20px auto 50px;
 }
+.double-line-divider::after {
+    content: "";
+    width: 60%;
+    height: 1px;
+    background-color: #ededed;
+    display: block;
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+}
+
+.double-line-divider::before {
+    content: url('../images/line.png');
+    z-index: 2;
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
 
 /* Start NavBar */
 nav.navbar{
@@ -256,25 +274,6 @@ nav .navbar-nav.icons .btn-danger {background-color: #b8152d;}
 
 .wooCommerce-ready h3 {font-size: 30px; position: relative;}
 
-.wooCommerce-ready h3::after {
-    content: "";
-    width: 45%;
-    height: 1px;
-    background-color: #575757;
-    display: block;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-}
-
-.wooCommerce-ready h3::before {
-    content: url('../images/line.png');
-    z-index: 2;
-    position: absolute;
-    bottom: -20px;
-    left: 0;
-}
-
 .wooCommerce-ready p {font-size: 14px; color: #72757d;}
 
 .wooCommerce-ready i {color: #b8152d;}
@@ -300,25 +299,6 @@ nav .navbar-nav.icons .btn-danger {background-color: #b8152d;}
     color: #2e3138;
     position: relative;
     margin-bottom: 30px;
-}
-
-.well-organized h2::after {
-    content: "";
-    width: 45%;
-    height: 1px;
-    background-color: #575757;
-    display: block;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-}
-
-.well-organized h2::before {
-    content: url('../images/line.png');
-    z-index: 2;
-    position: absolute;
-    bottom: -20px;
-    left: 0;
 }
 
 .well-organized p {font-size: 16px; color: #72757d;}
@@ -379,25 +359,6 @@ nav .navbar-nav.icons .btn-danger {background-color: #b8152d;}
     color: #2e3138;
     position: relative;
     margin: 50px 0;
-}
-
-.posts h2::after {
-    content: "";
-    width: 60%;
-    height: 1px;
-    background-color: #575757;
-    display: block;
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-}
-
-.posts h2::before {
-    content: url('../images/line.png');
-    z-index: 2;
-    position: absolute;
-    bottom: -20px;
-    left: 0;
 }
 
 .posts .media .date {
@@ -508,10 +469,15 @@ footer ul li a:hover {
 
 footer .tickets p {padding: 10px 0; margin-bottom: 0;}
 
-footer .btn {
+footer .btn,
+footer .btn a {
     font-size: 11px;
     color: #fff;
     margin: 15px 3px;
+}
+
+footer .btn a:hover {
+    text-decoration: none;
 }
 
 footer .form-control {
